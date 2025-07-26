@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-682.8483 125.1367 253.74 292.993" width="253.74px"
+    height="292.993px">
+    <g id="Symbol" transform="matrix(1, 0, 0, 1, -682.8482767767946, 125.13669009710384)">
+        <polygon class="cls-1" points="126.87 0 .016 73.239 126.87 146.497 126.87 0"
+            style="fill: rgb(0, 255, 127);"></polygon>
+        <polygon class="cls-6" points="253.723 73.239 126.87 0 126.87 146.497 253.723 73.239"
+            style="fill: rgb(251, 236, 13);"></polygon>
+        <polygon class="cls-2"
+            points=".016 73.239 0 73.248 0 219.745 .016 219.754 126.87 146.497 .016 73.239"
+            style="fill: rgb(74, 157, 255);"></polygon>
+        <polygon class="cls-3"
+            points="126.87 146.497 253.723 219.754 253.74 219.745 253.74 73.248 253.723 73.239 126.87 146.497"
+            style="fill: rgb(255, 177, 0);"></polygon>
+        <polygon class="cls-5" points="126.87 292.993 253.723 219.754 126.87 146.497 126.87 292.993"
+            style="fill: rgb(255, 69, 0);"></polygon>
+        <polygon class="cls-4" points=".016 219.754 126.87 292.993 126.87 146.497 .016 219.754"
+            style="fill: rgb(164, 107, 255);"></polygon>
+    </g>
+</svg>
