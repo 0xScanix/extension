@@ -1,52 +1,46 @@
-# React + Vite + CRXJS
+# 🔎 Scanix — Multichain Blockchain Explorer Chrome Extension
 
-This template helps you quickly start developing Chrome extensions with React, TypeScript and Vite. It includes the CRXJS Vite plugin for seamless Chrome extension development.
+**Scanix** is a lightweight and powerful Chrome Extension that brings the power of a multichain blockchain explorer directly to your browser. Just **highlight any blockchain address, transaction hash, or block number**, right-click, and instantly look it up on your preferred blockchain explorer. Works seamlessly across multiple chains!
 
-## Features
+## 🚀 Features
 
-- React with TypeScript
-- TypeScript support
-- Vite build tool
-- CRXJS Vite plugin integration
-- Chrome extension manifest configuration
+* **Quick Lookup**: Highlight any blockchain data (address, tx hash, block) and open it directly in your preferred block explorer.
+* **Multichain Support**: Ethereum, Polygon, BNB Chain, Arbitrum, Optimism, Base, Avalanche, and more!
+* **Custom Explorer Configuration**: Easily configure which explorer you want to use for each chain.
+* **Lightweight**: Built for speed and minimal resource usage.
 
-## Quick Start
+## 🧰 How It Works
 
-1. Install dependencies:
+1. **Install the extension.**
+2. Highlight an address, transaction hash, or block number on any webpage.
+3. Right-click and choose: `🔎 Search on Scanix`.
+4. It opens in a new tab using your chosen chain and explorer.
+
+## 📦 Installation
+
+### From Chrome Web Store *(Coming Soon)*
+
+> 🚧 In development. Will be published shortly.
+
+### Manual Installation
+
+1. Clone or download this repo.
+2. Open Chrome and go to `chrome://extensions/`.
+
+3. Run commands
 
 ```bash
-npm install
+# Install dependencies
+bun install
+
+# Run in development mode
+bun run dev
 ```
 
-2. Start development server:
+4. Enable **Developer Mode** (top right).
+5. Click **Load unpacked** and select the folder containing this repo.
 
-```bash
-npm run dev
-```
 
-3. Open Chrome and navigate to `chrome://extensions/`, enable "Developer mode", and load the unpacked extension from the `dist` directory.
+## 🧪 Supported Chains
 
-4. Build for production:
-
-```bash
-npm run build
-```
-
-## Project Structure
-
-- `src/popup/` - Extension popup UI
-- `src/content/` - Content scripts
-- `manifest.config.ts` - Chrome extension manifest configuration
-
-## Documentation
-
-- [React Documentation](https://reactjs.org/)
-- [Vite Documentation](https://vitejs.dev/)
-- [CRXJS Documentation](https://crxjs.dev/vite-plugin)
-
-## Chrome Extension Development Notes
-
-- Use `manifest.config.ts` to configure your extension
-- The CRXJS plugin automatically handles manifest generation
-- Content scripts should be placed in `src/content/`
-- Popup UI should be placed in `src/popup/`
+Coming Soon
