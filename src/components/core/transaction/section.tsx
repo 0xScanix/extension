@@ -19,3 +19,10 @@ export function TransactionSection({ title, children }: TransactionSectionProps)
         </>
     )
 }
+
+export function TransactionHR() {
+    return (
+        <div className="col-span-12 border my-8">
+        </div>
+    )
+}

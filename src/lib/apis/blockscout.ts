@@ -12,7 +12,6 @@ export class BlockscoutRequest implements ApiRequest {
 
     async getAddressInternalTxs(requestParameters: GetAddressInternalTxsRequest): Promise<GetAddressInternalTxs200Response> {
         const apiUrl = getApi(this.chainId)
-        console.log(`${apiUrl}/api/v2/addresses/${requestParameters.addressHash}/transactions`)
         const response = await fetch(`${apiUrl}/api/v2/addresses/${requestParameters.addressHash}/transactions`, {
             "method": "GET",
         });

@@ -54,6 +54,20 @@ export const explorerTransaction = (
     return `${baseUrl}/tx/${address}`;
 };
 
+export const explorerBlock = (
+    address: string,
+    chainId: string = ChainID.ETHEREUM_MAINNET,
+    explorer: Explorer = Explorer.BLOCKSCOUT
+): string | null => {
+    const chainData = data[chainId];
+    if (!chainData || typeof chainData !== "object") return "";
+
+    const baseUrl = chainData[explorer];
+    if (!baseUrl) return "";
+
+    return `${baseUrl}/block/${address}`;
+};
+
 export const getAllAvailableExplorer = (
     chainId: string = ChainID.ETHEREUM_MAINNET
 ): Explorer[] => {

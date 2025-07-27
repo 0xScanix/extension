@@ -15,11 +15,9 @@ export function ToFromAddress({ address, prefix }: ToFromAddressProps) {
                     <Identicon seed={address} scale={5} borderRadius={999} />
                 </div>
             </div>
-            <div className="col-span-10">
-                <div className="flex flex-row items-center">
-                    <div>{`${prefix ? prefix + ' ' : ''}${mask(address)}`}</div>
-                    <CopyText payload={address} />
-                </div>
+            <div className="col-span-10 flex flex-row items-center">
+                <div>{`${prefix ? prefix + ' ' : ''}${mask(address, 16)}`}</div>
+                <CopyText payload={address} />
             </div>
         </>
     )

@@ -1,7 +1,8 @@
 import HelloWorld from '@/components/HelloWorld'
 import { ThemeProvider } from "@/components/theme/provider"
-import './App.css'
 import { CoreProvider } from '@/components/provider'
+
+import './App.css'
 
 export default function App() {
   return (

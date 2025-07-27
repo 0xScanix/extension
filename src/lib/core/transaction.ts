@@ -1,9 +1,11 @@
-import { createPublicClient, http, Transaction } from "viem"
+import { Block, createPublicClient, http, Transaction, TransactionReceipt } from "viem"
 import { getRPC } from "../chains/rpc"
 
 export interface TransactionResponse {
     transaction: Transaction
     confirmations: bigint
+    block: Block
+    receipt: TransactionReceipt
 }
 
 export class TransactionRequest {
@@ -19,9 +21,12 @@ export class TransactionRequest {
             transport: http(rpc),
         })
 
-        const transaction = await publicClient.getTransaction({
-            hash,
-        })
+        const transaction = await publicClient.getTransaction({ hash })
+        const receipt = await publicClient.getTransactionReceipt({ hash });
+
+        const block = await publicClient.getBlock({
+            blockNumber: transaction.blockNumber,
+        });
 
         const confirmations = await publicClient.getTransactionConfirmations({
             hash,
@@ -29,7 +34,9 @@ export class TransactionRequest {
 
         return {
             transaction,
+            receipt,
             confirmations,
+            block,
         }
     }
 }

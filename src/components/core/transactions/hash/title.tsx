@@ -1,9 +1,14 @@
+import { cn } from "@/lib/utils"
+
 interface TransactionHashTitleProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
-export function TransactionHashTitle({ children }: TransactionHashTitleProps) {
+export function TransactionHashTitle({ className, children }: TransactionHashTitleProps) {
     return (
-        <h4 className="flex items-center gap-2 text-sm leading-none font-bold select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 mb-2">
+        <h4 className={
+            cn("flex items-center gap-2 text-sm leading-none font-bold select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+                className)}
+        >
             {children}
         </h4>
     )

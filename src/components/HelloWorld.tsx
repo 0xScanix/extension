@@ -32,6 +32,7 @@ export default function HelloWorld() {
     chrome.storage.local.get('selectedText', (result) => {
       if (result.selectedText) {
         setInput(result.selectedText)
+        onSearch(result.selectedText)
       } else {
         setInput('')
       }
@@ -40,6 +41,7 @@ export default function HelloWorld() {
     const onChangeListener = (changes: Record<string, chrome.storage.StorageChange>) => {
       if (changes.selectedText) {
         setInput(changes.selectedText.newValue || '')
+        onSearch(changes.selectedText.newValue)
       }
     }
 
@@ -74,6 +76,7 @@ export default function HelloWorld() {
     const isInputAddress = isAddress(input)
 
     // await getEthPrice()
+    console.log("Selected Chain", selectedChain)
     if (isInputAddress) {
       const explorer = await getExplorerRequest(selectedChain)
       const data = await explorer.getAddressInternalTxs({ addressHash: input })
@@ -116,7 +119,7 @@ export default function HelloWorld() {
               <AddressPage address={enteredValue} />
 
               {transactions &&
-                <div>
+                <div className="flex flex-col space-y-2">
                   {transactions.items.length > 0
                     ? <>
                       {transactions.items.map((transaction) => {

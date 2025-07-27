@@ -18,7 +18,7 @@ type CoreProviderState = {
     selectedChain: ChainID
     setSelectedChain: (theme: ChainID) => void
 
-    inputBalance: BigInt
+    inputBalance: bigint
     transactions: GetAddressInternalTxs200Response | undefined,
     setTransactions: (theme: GetAddressInternalTxs200Response | undefined) => void
     resetState: () => void
@@ -58,7 +58,7 @@ export function CoreProvider({
 
     const [inputBalance, setInputBalance] = useState(BigInt(0))
     const [transactions, setInternalTransactions] = useState<GetAddressInternalTxs200Response | undefined>()
-    const [addressInfo, setInternalAddressInfo] = useState<Address | undefined>()
+    const [_, setInternalAddressInfo] = useState<Address | undefined>()
 
     const setTransactions = (transactions: GetAddressInternalTxs200Response | undefined) => {
         setInternalTransactions(transactions)

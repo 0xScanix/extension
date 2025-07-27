@@ -2,7 +2,7 @@ export const mask = (input: string, slice: number = 4) => {
     if (!input) {
         return ""
     }
-    
+
     if (input.length <= 8) {
         return input // If the string is 8 characters or less, return unchanged
     }
@@ -30,4 +30,18 @@ export const dateTimeDifference = (dateString: string) => {
         return `${secs} second${secs > 1 ? 's' : ''} ago`
 
     return parts.join(', ')
+}
+
+export const formatTimestampToUTC = (timestamp: bigint | number): string => {
+    const date = new Date(Number(timestamp) * 1000);
+    return date.toLocaleString('en-US', {
+        timeZone: 'UTC',
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+    }).replace(',', '').replace(' at', '') + ' UTC';
 }
