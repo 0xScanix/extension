@@ -1,20 +1,22 @@
-# 🔎 Scanix — Multichain Blockchain Explorer Chrome Extension
+<p align="center">
+  <h2 align="center">Scanix</h2>
+  <p align="center"><b>Multichain Blockchain Explorer Chrome Extension</b></p>
+</p>
 
-**Scanix** is a lightweight and powerful Chrome Extension that brings the power of a multichain blockchain explorer directly to your browser. Just **highlight any blockchain address, transaction hash, or block number**, right-click, and instantly look it up on your preferred blockchain explorer. Works seamlessly across multiple chains!
+## 🔎 About the project
 
-## 🚀 Features
-
-* **Quick Lookup**: Highlight any blockchain data (address, tx hash, block) and open it directly in your preferred block explorer.
-* **Multichain Support**: Ethereum, Polygon, BNB Chain, Arbitrum, Optimism, Base, Avalanche, and more!
-* **Custom Explorer Configuration**: Easily configure which explorer you want to use for each chain.
-* **Lightweight**: Built for speed and minimal resource usage.
+Scanix is a lightweight and powerful Chrome extension that improves the experience of blockchain exploration directly to your browser. Simply highlight any address, transaction hash, or block number, right-click, and instantly get information about it. From Ethereum, Etherlink, Redstone and more
 
 ## 🧰 How It Works
 
-1. **Install the extension.**
-2. Highlight an address, transaction hash, or block number on any webpage.
-3. Right-click and choose: `🔎 Search on Scanix`.
-4. It opens in a new tab using your chosen chain and explorer.
+First, find any blockchain data on a webpage — this can be an address, transaction hash, or block number. For example: 0x796Ea11Fa2dD751eD01b53C372fFDB4AAa8f00F9.
+
+Next, highlight the text, right-click, and choose "Search with Scanix" from the context menu.
+
+![image](example.png)
+
+Scanix will instantly open a popup displaying key details such as the balance, recent transactions, and contract activity — all pulled live from supported blockchains.
+
 
 ## 📦 Installation
 
@@ -24,23 +26,20 @@
 
 ### Manual Installation
 
-1. Clone or download this repo.
-2. Open Chrome and go to `chrome://extensions/`.
+1. **Clone or download** this repository.
 
-3. Run commands
+2. **Install and run the project:**
 
-```bash
-# Install dependencies
-bun install
+   ```bash
+   # Install dependencies
+   bun install
 
-# Run in development mode
-bun run dev
-```
+   # Start in development mode
+   bun run dev
+   ```
 
-4. Enable **Developer Mode** (top right).
-5. Click **Load unpacked** and select the folder containing this repo.
+3. **Load the extension in Chrome:**
 
-
-## 🧪 Supported Chains
-
-Coming Soon
+   * Open `chrome://extensions/` in your Chrome browser
+   * Enable **Developer Mode** (top right corner)
+   * Click **Load Unpacked** and select the `dist` folder from the project directory
