@@ -9,7 +9,11 @@ Scanix is a lightweight and powerful Chrome extension that improves the experien
 
 ## 🧰 How It Works
 
-First, find any blockchain data on a webpage — this can be an address, transaction hash, or block number. For example: 0x796Ea11Fa2dD751eD01b53C372fFDB4AAa8f00F9.
+First, find any blockchain data on a webpage — this can be an address, transaction hash, or block number. For example, highlight any of the below,
+
+- 0xc9B53AB2679f573e480d01e0f49e2B5CFB7a3EAb
+- 0x796Ea11Fa2dD751eD01b53C372fFDB4AAa8f00F9
+- 0x24dc388fc939d9bc22c44e79526be919e509d7f2d5268537a4bcedab17e54ba0
 
 Next, highlight the text, right-click, and choose "Search with Scanix" from the context menu.
 
